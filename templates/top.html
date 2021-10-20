@@ -1,0 +1,15 @@
+<h1>hellooooo,{{user.username}}!!!</h1>
+<a href="/logout">ログアウト</a>
+<a href="/user/{{user.id}}/delete">退会</a>
+<p>経験値：{{user.ex}}</p>
+<p>レベル{{user.level}}</p>
+<p>レベルアップに必要な経験値：{{req}}</p>
+<p>総勉強時間：{{ user.minutes }}分</p>
+<p>勉強時間を記録する</p>
+<form method="POST">
+    <label for="">勉強時間（h）</label>
+    <input type="number" name="h" min="0" max="24" value="0">
+    <label for="">勉強時間（m）</label>
+    <input type="number" name="m" min="0" max="59" value="0">
+    <input type="submit" value="記録する">
+</form>
